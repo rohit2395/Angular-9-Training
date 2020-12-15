@@ -14,4 +14,9 @@ export class DemoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  showAlert(){
+    alert('hello from angular');
+  }
+
 }

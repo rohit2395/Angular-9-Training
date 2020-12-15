@@ -4,3 +4,15 @@
 <h3>String interpolation</h3>
 
 <p>{{demoData}}</p>
+<p>{{8+9}}</p>
+
+<h3>Property binding</h3>
+<p><input type="text" value="{{demoData}}"></p>
+
+<p><input type="text" [value]="demoData"></p>
+
+<h2>Event binding</h2>
+<button (click)="showAlert()">Click Me!</button>
+
+<h2>Two way data binding:ngModel</h2>
+<p><input type="text" [(ngModel)]="demoData"></p>
