@@ -1,0 +1,26 @@
+{
+  "name": "angular-9-training",
+  "version": "1.0.0",
+  "description": "Angular 9 Training",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohit2395/Angular-9-Training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohit2395/Angular-9-Training/issues"
+  },
+  "homepage": "https://github.com/rohit2395/Angular-9-Training#readme",
+  "dependencies": {
+    "webpack": "^5.10.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.2.0"
+  }
+}
