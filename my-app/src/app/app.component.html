@@ -1,1 +1,3 @@
-<app-demo></app-demo>
+<!-- <app-demo></app-demo> -->
+<app-currency (selected)="getCurrencyCode($event)"></app-currency>
+<app-product-list [selectedCurrencyCode]="seletedCurrencyCode"></app-product-list>

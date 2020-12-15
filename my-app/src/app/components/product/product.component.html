@@ -1,0 +1,10 @@
+<div>
+    <img [src]="pData.productImage">
+    <h3>{{pData.productName | uppercase}}</h3>
+    <!-- symbol/code -->
+    <h4>{{pData.productPrice | currency:selectedCurrencyCode:"symbol":"2.1-1"}}</h4>
+    <button *ngIf="pData.prodoctStock; else noStock">Add to card</button>
+    <ng-template #noStock>
+        <p>Out of stock!</p>
+    </ng-template>
+</div>
