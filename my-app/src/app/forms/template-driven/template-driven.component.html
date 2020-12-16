@@ -1,0 +1,18 @@
+<form (submit)="saveData(userForm)" #userForm="ngForm">
+    <label>Name:</label>
+    <input type="text" name="name" ngModel required #uname="ngModel">
+    <div *ngIf=" uname.touched || uname.dirty">
+        <small *ngIf="uname.hasError('required')">Please enter user name!</small>
+    </div>
+    <label>Age:</label>
+    <input type="text" name="age" ngModel>
+
+    <label>Pincode:</label>
+    <input type="text" name="pincode" ngModel required appZipCode #pin="ngModel">
+    <div *ngIf=" pin.touched || pin.dirty">
+        <small *ngIf="pin.hasError('required')||pin.hasError('zipCode')">Please enter valid pincode!</small>
+    </div>
+
+    <button type="button" (click)="loadData(userForm)">Fill Form</button>
+    <button>Submit</button>
+</form>

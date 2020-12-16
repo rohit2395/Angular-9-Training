@@ -16,7 +16,7 @@ export class ProductListComponent implements OnInit {
   pList:ProductModel[] = [{
     productId:1000,
     productName:'Shoe 1',
-    productPrice:14999.1234,
+    productPrice:14999.7234,
     prodoctStock:true,
     productImage:'assets/shoes.jpeg'
   },{

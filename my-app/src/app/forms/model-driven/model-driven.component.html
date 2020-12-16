@@ -1,0 +1,43 @@
+<form (submit)="saveData()" [formGroup]="userForm">
+    <label>Name:</label>
+    <input type="text" formControlName="name">
+    <app-show-errors [control]="userForm.get('name')"></app-show-errors>
+    <!-- <div *ngIf="userForm.get('name').touched || userForm.get('name').dirty">
+        <small *ngIf="userForm.get('name').hasError('required')">Please enter user name!</small>
+        <small *ngIf="userForm.get('name').hasError('minlength')">Name length is less than 4!</small>
+    </div> -->
+
+    <label>Age:</label>
+    <input type="text" formControlName="age">
+    <app-show-errors [control]="userForm.get('age')"></app-show-errors>
+    <!-- <div *ngIf="userForm.get('age').touched || userForm.get('age').dirty">
+        <small *ngIf="userForm.get('age').hasError('required')">Please enter age!</small>
+    </div> -->
+
+    <label>Email:</label>
+    <input type="email" formControlName="email">
+    <div *ngIf="userForm.get('email').touched || userForm.get('email').dirty">
+        <small *ngIf="userForm.get('email').hasError('required')">Please enter email!</small>
+        <small *ngIf="userForm.get('email').hasError('email') || userForm.get('email').hasError('pattern')">Please enter a valid emal!</small>
+    </div>
+
+    <ng-container formGroupName="address">
+        <label>City</label>
+        <input type="text" formControlName="city" />
+        <app-show-errors [control]="addrObj.get('city')"></app-show-errors>
+        <!-- <div *ngIf="addrObj.get('city').touched || addrObj.get('city').dirty">
+            <small *ngIf="addrObj.get('city').hasError('required')">Please enter valid city!</small>
+        </div> -->
+        <label>Pincode</label>
+        <input type="text" formControlName="pincode" />
+        <app-show-errors [control]="addrObj.get('pincode')"></app-show-errors>
+        <!-- <div *ngIf="addrObj.get('pincode').touched || addrObj.get('pincode').dirty">
+            <small *ngIf="addrObj.get('pincode').hasError('required') || addrObj.get('pincode').hasError('zipCode')">Please enter valid pincode!</small>
+        </div> -->
+    </ng-container>
+    
+    <pre>{{userForm.value | json}}</pre>
+
+    <button type="button" (click)="loadData()">Fill Form</button>
+    <button>Submit</button>
+</form>
