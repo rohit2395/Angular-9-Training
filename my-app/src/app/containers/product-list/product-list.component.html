@@ -1,3 +1,8 @@
-<div *ngFor="let product of pList">
-    <app-product [pData]="product" [selectedCurrencyCode]="selectedCurrencyCode"></app-product>
+
+<div appRow >
+<div *ngFor="let product of pList" appColumn="3">
+    <!-- <app-product [pData]="product" [selectedCurrencyCode]="selectedCurrencyCode"></app-product> -->
+    <app-product [pData]="product" [selectedCurrencyCode]="currencyObservable | async"></app-product>
+
+</div>
 </div>
